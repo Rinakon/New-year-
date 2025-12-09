@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>С Новым Годом!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Фон: снег -->
+  <div id="snow"></div>
 
+  <!-- Снеговик (в правом нижнем углу) -->
+  <div class="snowman">
+    <div class="snowman-head"></div>
+    <div class="snowman-body"></div>
+    <div class="snowman-arm-left"></div>
+    <div class="snowman-arm-right"></div>
+    <div class="snowman-eye-left"></div>
+    <div class="snowman-eye-right"></div>
+    <div class="snowman-smile"></div>
+    <div class="snowman-nose"></div>
+    <div class="snowman-hat"></div>
+    <div class="snowman-scarf"></div>
+  </div>
+
+  <!-- Основной контент -->
+  <div class="container">
+    <!-- Ёлка с огнями -->
+    <div class="tree">
+      <div class="tree-top">★</div>
+      <div class="tree-body"></div>
+      <div class="trunk"></div>
+      <div class="light light1"></div>
+      <div class="light light2"></div>
+      <div class="light light3"></div>
+      <div class="light light4"></div>
+      <div class="light light5"></div>
+      <div class="light light6"></div>
+    </div>
+
+    <!-- Стихотворение -->
+    <div class="poem">
+      <p>Ёлка светится огнями,<br>
+         Новый год стучится к нам!<br>
+         Счастья, радости, удачи —<br>
+         Пусть исполнится мечта!</p>
+    </div>
+
+    <!-- Поздравление -->
+    <div class="greeting">
+      <h1>С Новым 2026 годом!</h1>
+    </div>
+  </div>
+
+  <!-- Аудио (скрытый плеер) -->
+  <audio id="holidayMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

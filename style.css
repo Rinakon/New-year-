@@ -1,1 +1,234 @@
+/* === СТАРЫЕ СТИЛИ (без изменений, кроме body) === */
 
+body {
+  background: linear-gradient(to bottom, #0c1445, #1a237e);
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* === ЁЛКА (без изменений) === */
+.tree {
+  position: relative;
+  width: 220px;
+  height: 430px;
+  margin: 0 auto 30px;
+}
+
+.tree-top {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  color: gold;
+  z-index: 5;
+}
+
+.tree-body {
+  width: 220px;
+  height: 360px;
+  background: linear-gradient(to right, #0a5f0a, #0d700d);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 255, 100, 0.3);
+  margin: 0 auto;
+}
+
+.trunk {
+  width: 30px;
+  height: 40px;
+  background: #8B4513;
+  margin: 0 auto;
+  border-radius: 0 0 5px 5px;
+}
+
+.light {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  animation: twinkle 1.8s infinite ease-in-out;
+}
+
+.light1 { top: 60px;  left: 50%; background: red;    animation-delay: 0.0s; }
+.light2 { top: 110px; left: 35%; background: blue;   animation-delay: 0.3s; }
+.light3 { top: 110px; right: 35%; background: gold;  animation-delay: 0.6s; }
+.light4 { top: 180px; left: 40%; background: lime;   animation-delay: 0.9s; }
+.light5 { top: 180px; right: 40%; background: pink;  animation-delay: 1.2s; }
+.light6 { top: 260px; left: 50%; background: cyan;   animation-delay: 0.5s; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 12px currentColor; }
+}
+
+.poem {
+  font-size: 20px;
+  margin: 25px 0;
+  line-height: 1.6;
+}
+
+.greeting h1 {
+  font-size: 28px;
+  color: #ffcc00;
+}
+
+/* === СНЕГ (без изменений) === */
+#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#snow div {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to { transform: translateY(100vh); }
+}
+
+/* === СНЕГОВИК === */
+.snowman {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 100px;
+  height: 160px;
+  z-index: 5;
+}
+
+.snowman-head {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 110px;
+  left: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.snowman-body {
+  width: 80px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.snowman-eye-left,
+.snowman-eye-right {
+  width: 6px;
+  height: 6px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 130px;
+}
+
+.snowman-eye-left { left: 35px; }
+.snowman-eye-right { left: 55px; }
+
+.snowman-smile {
+  width: 20px;
+  height: 10px;
+  border-bottom: 2px solid black;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  bottom: 122px;
+  left: 40px;
+}
+
+.snowman-nose {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid orangered;
+  position: absolute;
+  bottom: 118px;
+  left: 42px;
+}
+
+.snowman-hat {
+  width: 60px;
+  height: 8px;
+  background: black;
+  position: absolute;
+  bottom: 162px;
+  left: 20px;
+}
+.snowman-hat::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  background: black;
+  top: -20px;
+  left: 15px;
+  border-radius: 3px;
+}
+
+.snowman-scarf {
+  width: 50px;
+  height: 12px;
+  background: #ff4136;
+  position: absolute;
+  bottom: 100px;
+  left: 25px;
+  border-radius: 2px;
+}
+.snowman-scarf::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 30px;
+  background: #ff4136;
+  bottom: -30px;
+  left: 12px;
+}
+
+.snowman-arm-left,
+.snowman-arm-right {
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: saddlebrown;
+  bottom: 60px;
+  border-radius: 2px;
+}
+
+.snowman-arm-left {
+  left: -30px;
+  transform: rotate(-20deg);
+}
+
+.snowman-arm-right {
+  right: -30px;
+  transform: rotate(20deg);
+}
